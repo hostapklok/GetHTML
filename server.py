@@ -42,7 +42,7 @@ def get_proxies() -> dict:
             port = cols[1].text
             https_support = cols[6].text  # The 'Yes'/'No' column for HTTPS support
             if https_support == "yes":  # Check if the proxy supports HTTPS
-                proxy = f"https://{ip}:{port}"  # HTTPS proxy
+                proxy = f"http://{ip}:{port}"  # HTTPS proxy
                 proxyresponse.close()
                 return {
                     "http": proxy,
